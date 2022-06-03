@@ -70,6 +70,26 @@ const categoryOrder = [
  * Note: The options below are sorted alphabetically.
  */
 const options = {
+  cache: {
+    default: false,
+    description: "Only format changed files. Cannot use with --stdin-filepath.",
+    type: "boolean",
+  },
+  "cache-strategy": {
+    choices: [
+      {
+        description: "Use the file metadata such as timestamps as cache keys",
+        value: "metadata",
+      },
+      {
+        description: "Use the file content as cache keys",
+        value: "content",
+      },
+    ],
+    default: "metadata",
+    description: "Strategy for the cache to use for detecting changed files.",
+    type: "choice",
+  },
   check: {
     type: "boolean",
     category: coreOptions.CATEGORY_OUTPUT,

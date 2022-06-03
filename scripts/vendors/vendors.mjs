@@ -7,6 +7,7 @@ const vendors = [
   "html-void-elements",
   "leven",
   "mem",
+  "sdbm",
   "string-width",
   "strip-ansi",
   "tempy",
